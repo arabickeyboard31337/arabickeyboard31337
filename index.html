@@ -9,7 +9,7 @@
     <meta name="description" content="online text editor to write and search in arabic if you do not have an arabic keyboard ( كيبورد للكتابة بالعربي )">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content=IE=edge>
-    <link rel="icon" href="./imgs/favicon.png">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="canonical" href="https://www.arabickeyboard.xyz/" />
     <style>
@@ -52,7 +52,7 @@
 
   <body style="background-color: #FFFDFD;">
     <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 mb-3 bg-white border-bottom box-shadow" style="background-color: #e3f2fd !important;">
-      <h2 class="logo my-0 mr-md-auto font-weight-normal">Arabic Keyboard</h2>
+      <h2 class="logo my-0 mr-md-auto font-weight-normal" onclick="window.location.href = 'https://www.arabickeyboard.xyz';">Arabic Keyboard</h2>
       <a class="bounce btn btn-secondary btn-sm p-2 my-2 my-md-0 mr-md-3" href="https://en.wikipedia.org/wiki/Arabic">Learn Arabic</a>
     </div>
 
@@ -166,8 +166,8 @@
       <hr style="width: 65%;">
       <p class="mb-1">&copy; 2019-2020 Arabic Keyboard</p>
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="contact.html">Contact Us</a></li>&middot;
-        <li class="list-inline-item"><a href="privacy.html">Privacy</a></li>
+        <li class="list-inline-item" style="cursor: pointer;" onclick="window.location.href = 'https://www.arabickeyboard.xyz/contact.html';"><u>Contact Us</u></li>&middot;
+        <li class="list-inline-item" style="cursor: pointer;" onclick="window.location.href = 'https://www.arabickeyboard.xyz/privacy.html';"><u>Privacy</u></li>
       </ul>
     </footer>
 
@@ -178,12 +178,40 @@
       var searchBar = document.getElementById('searchBar');
       
       function writeTextArea(letter) {
-		textarea.value += letter;
-        textarea.focus();     
+		    //IE support
+        if (document.selection) {
+          textarea.focus();
+          sel = document.selection.createRange();
+          sel.text = letter;
+        }
+        //MOZILLA and others
+        else if (textarea.selectionStart || textarea.selectionStart == '0') {
+          var startPos = textarea.selectionStart;
+          var endPos = textarea.selectionEnd;
+          textarea.value = textarea.value.substring(0, startPos) + letter + textarea.value.substring(endPos, textarea.value.length);
+            textarea.selectionStart = startPos + letter.length; 
+            textarea.selectionEnd = startPos + letter.length;
+            textarea.focus();
+        } else {
+          textarea.value += letter;
+          textarea.focus();
+        }   
       }
 
       function backspaceTextArea() {
-      	textarea.value = textarea.value.substr(0, textarea.value.length - 1);
+        var startPos = textarea.selectionStart;
+        var endPos = textarea.selectionEnd;
+
+        if(textarea.selectionStart == textarea.selectionEnd) {
+          textarea.value = textarea.value.substring(0, startPos - 1) + textarea.value.substring(endPos, textarea.value.length);
+          textarea.selectionStart = startPos - 1; 
+          textarea.selectionEnd = startPos - 1;
+        } else {
+          textarea.value = textarea.value.substring(0, startPos) + textarea.value.substring(endPos, textarea.value.length);
+          textarea.selectionStart = startPos; 
+          textarea.selectionEnd = startPos;
+        }
+
       	textarea.focus();     
       }
 

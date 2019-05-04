@@ -3,11 +3,11 @@
 
   <head>
     <meta charset="utf-8">
-    <title>404 Page Not Found</title>
+    <title>Contact | Arabic Keyboard</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="404, page not found">
-    <meta name="description" content="404 page not found on website.">
+    <meta name="keywords" content="contact, feedback, arabic keyboard">
+    <meta name="description" content="Send your feedback to support when you have a problem with the arabic keyboard app.">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content=IE=edge>
     
@@ -55,18 +55,59 @@
   <body style="background-color: #FFFDFD;">
     <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 mb-3 bg-white border-bottom box-shadow" style="background-color: #e3f2fd !important;">
       <h2 class="logo my-0 mr-md-auto font-weight-normal" onclick="window.location.href = 'https://www.arabickeyboard.xyz';">Arabic Keyboard</h2>
+      <a class="bounce btn btn-secondary btn-sm p-2 my-2 my-md-0 mr-md-3" href="https://en.wikipedia.org/wiki/Arabic">Learn Arabic</a>
     </div>
 
-    <section style="padding-top: 10%;">
+    <section style="padding-top: 3%;">
       <div class="container">
         <div class="row">
           <div class="col-md-1">
           </div>
-          <div class="col-md-10 text-center">
-            <h2 class="section-heading">404</h2>
-            <h4 class="section-subheading text-muted">Page Not Found</h4>
-            <button class="bounce btn btn-secondary btn-md" style="margin-top: 1%;" onclick="window.location.href = 'https://www.arabickeyboard.xyz';">⟵ Home</button>
+
+          <div class="col-md-10">
+            <div class="col-lg-12">
+              <h2 class="section-heading">Contact Us</h2>
+              <h4 class="section-subheading text-muted">We welcome your feedback.</h4>
+            </div>
           </div>
+
+          <div class="col-md-1">
+          </div>
+        </div>
+        <div style="padding-top: 1%;" class="row">
+          <div class="col-md-1">
+          </div>
+
+          <div class="col-md-10">
+            <form action="https://formspree.io/support@arabickeyboard.xyz"
+             method="POST" name="sentMessage" id="contactForm">
+              <div class="row">
+                <div class="col-md-6" style="height: 91%;">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" required>
+                  </div>
+
+                  <div class="form-group">  
+                    <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" required>
+                  </div>
+
+                  <div class="form-group">  
+                    <input type="text" class="form-control" placeholder="Subject *" id="phone" name="subject" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group" style="height: 91%;">
+                    <textarea style="height: 100%;" class="form-control" placeholder="Your Message *" id="message" name="message" required></textarea>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 text-center" style="padding-top: 0.5%;">
+                  <input type="submit" value="Send" class="btn btn-secondary btn-lg">
+                </div>
+              </div>
+            </form>
+          </div>
+
           <div class="col-md-1">
           </div>
         </div>
@@ -79,8 +120,8 @@
       <hr style="width: 65%;">
       <p class="mb-1">&copy; 2019-2020 Arabic Keyboard</p>
       <ul class="list-inline">
-        <li class="list-inline-item" style="cursor: pointer;" onclick="window.location.href = 'https://www.arabickeyboard.xyz/contact.html';">Contact Us</li>&middot;
-        <li class="list-inline-item" style="cursor: pointer;" onclick="window.location.href = 'https://www.arabickeyboard.xyz/privacy.html';">Privacy</li>
+        <li class="list-inline-item" style="cursor: pointer;" onclick="window.location.href = 'https://www.arabickeyboard.xyz/contact.html';"><u>Contact Us</u></li>&middot;
+        <li class="list-inline-item" style="cursor: pointer;" onclick="window.location.href = 'https://www.arabickeyboard.xyz/privacy.html';"><u>Privacy</u></li>
       </ul>
     </footer>
 	  
