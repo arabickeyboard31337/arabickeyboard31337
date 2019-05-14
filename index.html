@@ -60,6 +60,55 @@
           background-position: 0% 50%
         }
       }
+
+      .fade {
+        line-height: 0.8rem; position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        -webkit-transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%); 
+        color: white; 
+        background-color: #798287 !important; 
+        border-radius: 30px; position: absolute; 
+        z-index: 10;
+        animation: fadein 5s;
+        -moz-animation: fadein 5s; /* Firefox */
+        -webkit-animation: fadein 5s; /* Safari and Chrome */
+        -o-animation: fadein 5s; /* Opera */
+      }
+
+      @keyframes fadein {
+        from {
+            opacity:1;
+        }
+        to {
+            opacity:0;
+        }
+      }
+      @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:1;
+        }
+        to {
+            opacity:0;
+        }
+      }
+      @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:1;
+        }
+        to {
+            opacity:0;
+        }
+      }
+      @-o-keyframes fadein { /* Opera */
+        from {
+            opacity:1;
+        }
+        to {
+            opacity: 0;
+        }
+      }
     </style>
   </head>
 
@@ -81,7 +130,7 @@
           <div class="col-md-2">
           </div>
 
-          <div class="col-md-8">
+          <div id="main" class="col-md-8">
             <div class="input-group mb-3">
               <input id="searchBar" type="text" class="form-control" placeholder="🔍 Search . . ." style="margin-right: 3%; border: 1px solid #BBB; border-radius: 25px;">
               <button class="btn btn-secondary" type="button" onclick="primarySearchTextArea()" style="border: 1px solid #BBB; border-radius: 25px;">Search بحث</button>
@@ -91,10 +140,15 @@
 
             <div class="row" style="padding-bottom: 1%;">
               <div class="col-md-12">
+                <center>
+                <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="newTextArea()">New</button>
                 <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="saveTextArea()">Save</button>
                 <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="printTextArea()">Print</button>
-                <button type="button" style="line-height: 1.3; border-radius: .75rem; margin-left: 0.55%;" class="btn btn-secondary btn-sm float-right" onclick="translateTextArea()">Translate</button>
-                <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm float-right" onclick="secondarySearchTextArea()">Search</button>
+                <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="selectAllCopy()">Select All & Copy</button>             
+                
+                <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm">Translate</button>
+                <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="secondarySearchTextArea()">Search</button>             
+                </center>
               </div>
             </div>
 
@@ -207,9 +261,23 @@
     <!-- JavaScript -->
     <script src="js/imagemapresize.js"></script>
     <script>
+      // Get DOM elements
       var textarea  = document.getElementById('textarea');
       var searchBar = document.getElementById('searchBar');
-      
+      var main = document.getElementById('main');
+
+      // Initialize/Create alert box
+      var copyAlert = document.createElement("div");
+      copyAlert.setAttribute('class', 'alert alert-dark fade');
+
+      var copyAlertSpan = document.createElement("span");
+      var copyAlertSpanText = document.createTextNode("Text Copied!");
+
+      copyAlertSpan.appendChild(copyAlertSpanText);
+
+      copyAlert.appendChild(copyAlertSpan);
+
+      // App Functions
       function writeTextArea(letter) {
 		    //IE support
         if (document.selection) {
@@ -246,6 +314,17 @@
         }
 
       	textarea.focus();     
+      }
+
+      function newTextArea() {
+        textarea.value = "";
+        textarea.focus();
+      }
+
+      function selectAllCopy() {
+        textarea.select();
+        document.execCommand("copy");
+        main.appendChild(copyAlert);
       }
 
       function saveTextArea() {
