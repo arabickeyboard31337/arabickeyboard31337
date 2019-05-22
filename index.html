@@ -131,30 +131,23 @@
           </div>
 
           <div id="main" class="col-md-8">
-            <div class="input-group mb-3">
-              <input id="searchBar" type="text" class="form-control" placeholder="🔍 Search . . ." style="margin-right: 3%; border: 1px solid #BBB; border-radius: 25px;">
-              <button class="btn btn-secondary" type="button" onclick="primarySearchTextArea()" style="border: 1px solid #BBB; border-radius: 25px;">Search بحث</button>
-            </div>
-
-            <hr>
-
             <div class="row" style="padding-bottom: 1%;">
               <div class="col-md-12">
                 <center>
-                  <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="newTextArea()">New</button>
-                  <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="saveTextArea()">Save</button>
-                  <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="printTextArea()">Print</button>
-                  <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="selectAllCopy()">Select All & Copy</button>             
-                  
-                  <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="translateTextArea()">Translate</button>
-                  <button type="button" style="line-height: 1.3; border-radius: .75rem;" class="btn btn-secondary btn-sm" onclick="secondarySearchTextArea()">Search</button>             
+                  <button type="button" style="line-height: 1.3; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="newTextArea()">&#9998; New</button>
+                  <button type="button" style="line-height: 1.3; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="saveTextArea()">&#128190; Save</button>
+                  <button type="button" style="line-height: 1.3; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="printTextArea()">&#128438; Print</button>
+                  <button type="button" style="line-height: 1.3; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="selectAllCopy()">&#9986; Copy</button>
+
+                  <button type="button" style="line-height: 1.3; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="translateTextArea()">&#128203; Translate</button>
+                  <button type="button" style="line-height: 1.3; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="secondarySearchTextArea()">&#128269; Search</button>                          
                 </center>
               </div>
             </div>
 
             <center>
 
-              <textarea id="textarea" rows="4" cols="61" dir="rtl" style="width: 100%; margin-bottom: -6px; border-top: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5; border-left: 2px solid #B5B5B5; border-bottom: none; border-radius: 6px 6px 0px 0px; color: #444; font-family: 'Simplified Arabic','Times New Roman'; font-size: 17pt; padding-right: 8px; overflow: auto;" autofocus=></textarea>
+              <textarea id="textarea" rows="5" cols="61" dir="rtl" style="width: 100%; margin-bottom: -6px; border-top: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5; border-left: 2px solid #B5B5B5; border-bottom: none; border-radius: 6px 6px 0px 0px; color: #444; font-family: 'Simplified Arabic','Times New Roman'; font-size: 17pt; padding-right: 8px; overflow: auto;" autofocus=></textarea>
               <div style="background: #EEE url('./imgs/scroll.png') no-repeat scroll center 2px; height: 9px; width: 100%; overflow: hidden; border-left: 2px solid #b5b5b5; border-right: 2px solid #B5B5B5; margin-right: 0px;"></div>
               <img src="./imgs/keyboard.png" usemap="#keyboardmap" style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; width: 100%; height: auto;">
               
