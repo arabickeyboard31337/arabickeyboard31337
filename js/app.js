@@ -99,18 +99,29 @@
         childWindow.close();
       }
 
-      function primarySearchTextArea() {
-      	if(searchBar.value.length != 0) {
-      		window.open('https://www.google.com/search?q=' + searchBar.value);
-      	}
+      function googleSearch() {
+      	window.open('https://www.google.com/search?q=' + textarea.value);
       }
 
-      function secondarySearchTextArea() {
-        searchBar.value = textarea.value;
+      function googleImagesSearch() {
+        window.open('https://www.google.com/search?q=' + textarea.value + '&tbm=isch');
       }
 
-      function translateTextArea() {
-        window.open('https://translate.google.com/#view=home&op=translate&sl=ar&tl=en&text=' + textarea.value);
+      function youtubeSearch() {
+        window.open('https://www.youtube.com/results?search_query=' + textarea.value);
+      }
+
+      function yahooSearch() {
+        window.open('https://search.yahoo.com/search?q=' + textarea.value);
+      }
+
+      function bingSearch() {
+        window.open('https://www.bing.com/search?q=' + textarea.value);
+      }
+
+
+      function translateTextArea(lang) {
+        window.open('https://translate.google.com/#view=home&op=translate&sl=ar&tl=' + lang + '&text=' + textarea.value);
       }
 
       imageMapResize();

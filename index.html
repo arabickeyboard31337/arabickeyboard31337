@@ -45,8 +45,31 @@
                   <button type="button" style="line-height: 1.4; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="printTextArea()">&#128438; Print</button>
                   <button type="button" style="line-height: 1.4; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="selectAllCopy()">&#9986; Copy</button>
 
-                  <button type="button" style="line-height: 1.4; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="translateTextArea()">&#128203; Translate</button>
-                  <button type="button" style="line-height: 1.4; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="secondarySearchTextArea()">&#128269; Search</button>                          
+                  <div class="dropdown" style="display: inline;">
+                    <button type="button" style="line-height: 1.4; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      &#128203; Translate
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onclick="translateTextArea('en')"><img height="20px" width="20px" src="http://iconbug.com/data/9f/256/bf4d23d06cf97efc5317841ad3f7e3c8.png">&nbsp; English</a>
+                      <a class="dropdown-item" onclick="translateTextArea('de')"><img height="20px" width="20px" src="http://iconbug.com/data/92/256/91947f0d356af9434050f4e3a9797ffd.png">&nbsp;  German</a>
+                      <a class="dropdown-item" onclick="translateTextArea('es')"><img height="20px" width="20px" src="http://iconbug.com/data/a3/256/8228315ccfc8ec99a73255c59e07e35b.png">&nbsp; Spanish</a>
+                      <a class="dropdown-item" onclick="translateTextArea('fr')"><img height="20px" width="20px" src="http://iconbug.com/data/6c/256/4076746a20b3b22be8ac91102db4a9ab.png">&nbsp; French</a>
+                      <a class="dropdown-item" onclick="translateTextArea('it')"><img height="20px" width="20px" src="http://iconbug.com/data/1b/256/e4ffb81587ea4d988384f1f945dbef84.png">&nbsp; Italian</a>
+                    </div>
+                  </div> 
+
+                  <div class="dropdown" style="display: inline;">
+                    <button type="button" style="line-height: 1.4; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      &#128269; Search
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onclick="googleSearch()"><img height="20px" width="20px" src="http://pluspng.com/img-png/google-logo-png-open-2000.png">&nbsp; Google</a>
+                      <a class="dropdown-item" onclick="googleImagesSearch()"><img height="20px" width="20px" src="./imgs/googlephotoslogo.png">&nbsp; Images</a>
+                      <a class="dropdown-item" onclick="youtubeSearch()"><img height="20px" width="20px" src="https://www.umces.edu/sites/default/files/youtube.png">&nbsp; Youtube</a>
+                      <a class="dropdown-item" onclick="bingSearch()"><img height="20px" width="20px" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/125-bing-512.png">&nbsp; Bing</a>
+                      <a class="dropdown-item" onclick="yahooSearch()"><img height="20px" width="20px" src="https://cdn3.iconfinder.com/data/icons/ultimate-social/150/43_yahoo-512.png">&nbsp; Yahoo</a>
+                    </div>
+                  </div>                          
                 </center>
               </div>
             </div>
@@ -177,6 +200,10 @@
     <!-- JavaScript -->
     <script src="js/imagemapresize.js"></script>
     <script src="js/app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139426833-1"></script>
