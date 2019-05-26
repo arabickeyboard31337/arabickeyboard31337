@@ -50,11 +50,15 @@
                       &#128203; Translate
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" onclick="translateTextArea('en')"><img height="20px" width="20px" src="http://iconbug.com/data/9f/256/bf4d23d06cf97efc5317841ad3f7e3c8.png">&nbsp; English</a>
-                      <a class="dropdown-item" onclick="translateTextArea('de')"><img height="20px" width="20px" src="http://iconbug.com/data/92/256/91947f0d356af9434050f4e3a9797ffd.png">&nbsp;  German</a>
-                      <a class="dropdown-item" onclick="translateTextArea('es')"><img height="20px" width="20px" src="http://iconbug.com/data/a3/256/8228315ccfc8ec99a73255c59e07e35b.png">&nbsp; Spanish</a>
-                      <a class="dropdown-item" onclick="translateTextArea('fr')"><img height="20px" width="20px" src="http://iconbug.com/data/6c/256/4076746a20b3b22be8ac91102db4a9ab.png">&nbsp; French</a>
-                      <a class="dropdown-item" onclick="translateTextArea('it')"><img height="20px" width="20px" src="http://iconbug.com/data/1b/256/e4ffb81587ea4d988384f1f945dbef84.png">&nbsp; Italian</a>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('en')">English</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('de')">German</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('es')">Spanish</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('fr')">French</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('it')">Italian</a>
                     </div>
                   </div> 
 
@@ -63,11 +67,15 @@
                       &#128269; Search
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" onclick="googleSearch()"><img height="20px" width="20px" src="http://pluspng.com/img-png/google-logo-png-open-2000.png">&nbsp; Google</a>
-                      <a class="dropdown-item" onclick="googleImagesSearch()"><img height="20px" width="20px" src="./imgs/googlephotoslogo.png">&nbsp; Images</a>
-                      <a class="dropdown-item" onclick="youtubeSearch()"><img height="20px" width="20px" src="https://www.umces.edu/sites/default/files/youtube.png">&nbsp; Youtube</a>
-                      <a class="dropdown-item" onclick="bingSearch()"><img height="20px" width="20px" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/125-bing-512.png">&nbsp; Bing</a>
-                      <a class="dropdown-item" onclick="yahooSearch()"><img height="20px" width="20px" src="https://cdn3.iconfinder.com/data/icons/ultimate-social/150/43_yahoo-512.png">&nbsp; Yahoo</a>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="googleSearch()">Google</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="googleImagesSearch()">Google Images</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="youtubeSearch()">Youtube</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="bingSearch()">Bing</a>
+                      <div class="dropdown-divider"></div>
+                      <a style="font-size: 80%;" class="dropdown-item" onclick="yahooSearch()">Yahoo</a>
                     </div>
                   </div>                          
                 </center>
@@ -265,6 +273,12 @@
         to {
             opacity: 0;
         }
+      }
+
+      .dropdown-item:hover {
+        background-color: #798287 !important;
+        color: white !important;
+        cursor: pointer;
       }
     </style>
   </body>
