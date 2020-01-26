@@ -319,6 +319,7 @@
       var textarea  = document.getElementById('textarea');
       var searchBar = document.getElementById('searchBar');
       var main = document.getElementById('main');
+      var arr = [];
 
       // Initialize/Create alert box
       var copyAlert = document.createElement("div");
@@ -352,6 +353,193 @@
           textarea.focus();
         }   
       }
+
+      textarea.addEventListener("keydown", function(event) {
+        arr.push(event.keyCode);
+        if (arr.length != 0 && arr[arr.length - 2] === 17) {
+          return false;
+        } else if (event.keyCode === 65) {
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ش');
+        } else if (event.keyCode === 66) { // a
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('لا');
+        } else if (event.keyCode === 67) { // b
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ؤ');
+        } else if (event.keyCode === 67) { // c
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ؤ');
+        } else if (event.keyCode === 68) { // d
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ي');
+        } else if (event.keyCode === 69) { // e
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ث');
+        } else if (event.keyCode === 70) { // f
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ب');
+        } else if (event.keyCode === 71) { // g
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ل');
+        } else if (event.keyCode === 72) { // h
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ا');
+        } else if (event.keyCode === 73) { // i
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ه');
+        } else if (event.keyCode === 74) { // j
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ت');
+        } else if (event.keyCode === 75) { // k
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ن');
+        } else if (event.keyCode === 76) { // l
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('م');
+        } else if (event.keyCode === 77) { // m
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ة');
+        } else if (event.keyCode === 78) { // n
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ى');
+        } else if (event.keyCode === 79) { // o
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('خ');
+        } else if (event.keyCode === 80) { // p
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ح');
+        } else if (event.keyCode === 81) { // q
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ض');
+        } else if (event.keyCode === 82) { // r
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ق');
+        } else if (event.keyCode === 83) { // s
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('س');
+        } else if (event.keyCode === 84) { // t
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ف');
+        } else if (event.keyCode === 85) { // u
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ع');
+        } else if (event.keyCode === 86) { // v
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ر');
+        } else if (event.keyCode === 87) { // w
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ص');
+        } else if (event.keyCode === 88) { // x
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ء');
+        } else if (event.keyCode === 89) { // y
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('غ');
+        } else if (event.keyCode === 90) { // z
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ئ');
+        } else if(event.keyCode === 48) { // 0
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٠');
+        } else if(event.keyCode === 49) { // 1
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('١');
+        } else if(event.keyCode === 50) { // 2
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٢');
+        } else if(event.keyCode === 51) { // 3
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٣');
+        } else if(event.keyCode === 52) { // 4
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٤');
+        } else if(event.keyCode === 53) { // 5
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٥');
+        } else if(event.keyCode === 54) { // 6
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٦');
+        } else if(event.keyCode === 55) { // 7
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٧');
+        } else if(event.keyCode === 56) { // 8
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٨');
+        } else if(event.keyCode === 57) { // 9
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('٩');
+        } else if(event.keyCode === 190) { // .
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ز');
+        } else if(event.keyCode === 188) { // ,
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('و');
+        } else if(event.keyCode === 191) { // /
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ظ');
+        } else if(event.keyCode === 186) { // ;
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ك');
+        } else if(event.keyCode === 222) { // ''
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ط');
+        } else if(event.keyCode === 219) { // [
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ج');
+        } else if(event.keyCode === 221) { // ]
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('د');
+        } else if(event.keyCode === 192) { // `
+          event.preventDefault();
+          textarea.value = textarea.value.substring(textarea.selectionStart, textarea.length - 1);
+          writeTextArea('ذ');
+        }
+      });
 
       function backspaceTextArea() {
         var startPos = textarea.selectionStart;
