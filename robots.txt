@@ -1,2 +1,3 @@
+Sitemap: https://www.arabickeyboard.xyz/sitemap.xml
 User-agent: * 
 Disallow: 
