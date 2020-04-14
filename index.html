@@ -21,62 +21,31 @@
       <div class="container">
         <a class="navbar-brand" href="index.html" style="color: white;" >
           <img alt="website logo" src="https://raw.githubusercontent.com/arabickeyboard31337/arabickeyboard31337/master/favicon.png" width="30" height="30" class="d-inline-block align-top" style="border-radius: 5px 5px 5px 5px;">
-          <h1 style="display: inline; font-size: 125%;">&nbsp;Online Arabic Keyboard</h1>
+          <h1 style="display: inline; font-size: 115%;">&nbsp;Online Arabic Keyboard</h1>
         </a>
         <a class="btn btn-outline-light btn-sm p-2 my-2 my-md-0 mr-md-3" style="line-height: 1.3; border-radius: 1rem;" href="#how-to-learn-arabic">Learn Arabic</a>
       </div>
     </nav>
 
-    <section style="padding-top: 3%; padding-bottom: 7%;">
+    <section style="padding-top: 2.5%; padding-bottom: 5%;">
       <div class="container">
         <div class="row">
-          <div class="col-md-1"></div>
-          <div id="main" class="col-md-10">
+          <!-- Left -->
+          <div class="col-md-2"></div>
+
+          <!-- Center -->
+          <div id="main" class="col-md-8">
+
+            <!-- Top -->
             <div class="row" style="padding-bottom: 1%;">
               <div class="col-md-12" style="text-align: center;">
-                  <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="newTextArea()">&#9998; New</button>
-                  <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="saveTextArea()">&#128190; Save</button>
-                  <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="printTextArea()">&#128438; Print</button>
-                  <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md" onclick="selectAllCopy()">&#9986; Copy</button>
-
-                  <div class="dropdown" style="display: inline;">
-                    <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      &#128203; Translate
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('en')">English</a>
-                      <div class="dropdown-divider"></div>
-		                  <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('nl')">Dutch</a>
-                      <div class="dropdown-divider"></div>	    
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('de')">German</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('es')">Spanish</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('fr')">French</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="translateTextArea('it')">Italian</a>
-                    </div>
-                  </div> 
-
-                  <div class="dropdown" style="display: inline;">
-                    <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem;" class="btn btn-outline-secondary btn-md dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      &#128269; Search
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="googleSearch()">Google</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="googleImagesSearch()">Google Images</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="youtubeSearch()">Youtube</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="bingSearch()">Bing</a>
-                      <div class="dropdown-divider"></div>
-                      <a style="font-size: 80%;" class="dropdown-item" onclick="yahooSearch()">Yahoo</a>
-                    </div>
-                  </div>                          
+                <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem; width:125px;" class="btn btn-outline-secondary btn-md" onclick="newTextArea()">&#9998; New</button>
+                <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem; width:125px;" class="btn btn-outline-secondary btn-md" onclick="saveTextArea()">&#128190; Save</button>
+                <button type="button" style="line-height: 1.1; font-size: 91%; border-radius: 1rem; width:125px;" class="btn btn-outline-secondary btn-md" onclick="selectAllCopy()">&#9986; Copy</button>                         
               </div>
             </div>
-
+            
+            <!-- Main -->
             <div style="text-align: center;">
 
               <textarea autocapitalize="off" id="textarea" rows="7" cols="61" dir="rtl" style="width: 100%; margin-bottom: -6px; border-top: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5; border-left: 2px solid #B5B5B5; border-bottom: none; border-radius: 6px 6px 0px 0px; color: #444; font-family: 'Simplified Arabic','Times New Roman'; font-size: 17pt; padding-right: 8px; overflow: auto;" autofocus></textarea>
@@ -150,8 +119,45 @@
               </map>
 
             </div>
+
+            <!-- Bottom -->
+            <style>
+              .effect:hover {
+                color: white!important;
+              }
+              @media (max-width: 480px) {
+                .resize {
+                  font-size: 80% !important;
+                }
+              }
+            </style>
+            <div class="row" style="padding-top: 1%;">
+              <div class="col-md-6" style="text-align: center;">
+                <span>Translate to: </span>
+                <div class="btn-group">
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="translateTextArea('en')">English</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="translateTextArea('de')">German</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="translateTextArea('nl')">Dutch</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="translateTextArea('fr')">French</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="translateTextArea('it')">Italian</a>
+                </div>
+              </div>
+              <div class="col-md-6" style="text-align: center;">
+                <span>Search:</span>
+                <div class="btn-group">
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="googleSearch()">Google</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="youtubeSearch()">Youtube</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="bingSearch()">Bing</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="yahooSearch()">Yahoo</a>
+                  <a style="font-size: 85%;" class="btn btn-outline-secondary resize effect" onclick="imageSearch()">Images</a>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="col-md-1"></div>
+
+          <!-- Right -->
+          <div class="col-md-2"></div>
           
           <!--
           <div class="col-md-4">
@@ -593,22 +599,10 @@
         downloadLink.click();
       }
 
-      function printTextArea() {
-        childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
-        childWindow.document.open();
-        childWindow.document.write('<html><head></head><body>');
-        childWindow.document.write(textarea.value.replace(/\n/gi,'<br>'));
-        childWindow.document.write('</body></html>');
-        childWindow.print();
-        childWindow.document.close();
-        childWindow.close();
-      }
-
       function googleSearch() {
       	window.open('https://www.google.com/search?q=' + textarea.value);
       }
-
-      function googleImagesSearch() {
+      function imageSearch() {
         window.open('https://www.google.com/search?q=' + textarea.value + '&tbm=isch');
       }
 
@@ -616,14 +610,13 @@
         window.open('https://www.youtube.com/results?search_query=' + textarea.value);
       }
 
-      function yahooSearch() {
-        window.open('https://search.yahoo.com/search?q=' + textarea.value);
-      }
-
       function bingSearch() {
         window.open('https://www.bing.com/search?q=' + textarea.value);
       }
 
+      function yahooSearch() {
+        window.open('https://search.yahoo.com/search?q=' + textarea.value);
+      }
 
       function translateTextArea(lang) {
         window.open('https://translate.google.com/#view=home&op=translate&sl=ar&tl=' + lang + '&text=' + textarea.value);
@@ -631,10 +624,6 @@
 
       imageMapResize();
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer></script>
 	  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139426833-1"></script>
